@@ -71,19 +71,19 @@ async with ActivityClient(rpc_endpoints=["wss://..."]) as client:
 
 ```bash
 # Stream all trades (default endpoints)
-ctf-stream stream
+ctf stream
 
 # Use specific RPC endpoint
-ctf-stream stream --rpc wss://polygon-bor-rpc.publicnode.com
+ctf stream --rpc wss://polygon-bor-rpc.publicnode.com
 
 # Track specific Safe address/wallet
-ctf-stream stream --wallet 0x1234...
+ctf stream --wallet 0x1234...
 
 # Save to file (JSONL)
-ctf-stream stream --output trades.jsonl
+ctf stream --output trades.jsonl
 
 # Test connection
-ctf-stream ping --rpc wss://polygon-bor-rpc.publicnode.com
+ctf ping --rpc wss://polygon-bor-rpc.publicnode.com
 ```
 
 ### CLI Output

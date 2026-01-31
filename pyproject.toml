@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ctf-stream"
-version = "0.1.0"
+version = "0.1.1"
 description = "CTF activity stream SDK for prediction markets."
 readme = "README.md"
 license = "MIT"
@@ -65,7 +65,7 @@ Repository = "https://github.com/hungraw/ctf-stream.git"
 Issues = "https://github.com/hungraw/ctf-stream/issues"
 
 [project.scripts]
-ctf-stream = "ctf_stream.cli:app"
+ctf = "ctf_stream.cli:app"
 
 [tool.hatch.build.targets.wheel]
 packages = ["ctf_stream"]

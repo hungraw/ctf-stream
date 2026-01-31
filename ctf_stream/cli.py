@@ -17,7 +17,7 @@ except ImportError:
     sys.exit(1)
 
 app = typer.Typer(
-    name="ctf-stream",
+    name="ctf",
     help="Real-time CTF activity streaming for prediction markets.",
     no_args_is_help=True,
 )
@@ -212,7 +212,7 @@ async def _ping_async(rpc: str):
 def version():
     """Show version info."""
     from . import __version__
-    console.print(f"ctf-stream v{__version__}")
+    console.print(f"ctf v{__version__}")
 
 if __name__ == "__main__":
     app()
