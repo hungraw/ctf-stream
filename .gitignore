@@ -13,3 +13,6 @@ htmlcov/
 .vscode/
 .venv/
 .env
+.github/
+TODO.md
+docs/
