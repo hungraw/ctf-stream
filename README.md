@@ -11,25 +11,15 @@
 ## Features
 
 - **Fast** - Trades arrive as blocks are mined
-- **Simple** - No extra API
+- **Simple** - No API keys required
 - **Reconnection** - Exponential backoff w/ jitter, multi-endpoint failover
 - **Wallet filtering** - Track specific wallets
-- **CLI included** - Simple command-line tool
+- **Batteries** - Built-in CLI and Redis support
 
 ## Installation
 
 ```bash
-# Core (no Redis)
 pip install ctf-stream
-
-# With Redis cache support
-pip install ctf-stream[redis]
-
-# With CLI tools
-pip install ctf-stream[cli]
-
-# Everything
-pip install ctf-stream[all]
 ```
 
 ## Quick Start
@@ -70,7 +60,7 @@ async with ActivityClient(rpc_endpoints=["wss://..."]) as client:
 ## CLI Usage
 
 ```bash
-# Stream all trades (default endpoints)
+# Stream all trades
 ctf stream
 
 # Use specific RPC endpoint
@@ -79,11 +69,14 @@ ctf stream --rpc wss://polygon-bor-rpc.publicnode.com
 # Track specific Safe address/wallet
 ctf stream --wallet 0x1234...
 
+# Use Redis for caching
+ctf stream --redis redis://localhost:6379
+
 # Save to file (JSONL)
 ctf stream --output trades.jsonl
 
 # Test connection
-ctf ping --rpc wss://polygon-bor-rpc.publicnode.com
+ctf ping
 ```
 
 ### CLI Output
